@@ -210,31 +210,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          {/* 冒頭で提供サービス4要素を提示（ユーザー指示: 冒頭部分に4つの要素を入れる） */}
-          <div className="reveal reveal-4 mt-24">
-            <p className="mb-8 text-xs uppercase tracking-[0.35em] text-accent">
-              What I can do — 提供できること
-            </p>
-            <div className="grid gap-px border-t border-line sm:grid-cols-2">
-              {services.map((s) => (
-                <div
-                  key={s.title}
-                  className="group border-b border-line px-2 py-8 transition-colors sm:px-6 sm:odd:border-r"
-                >
-                  <div className="flex items-baseline gap-4">
-                    <span className="font-display text-sm text-gold">{s.no}</span>
-                    <h3 className="font-display text-lg font-semibold text-ink transition-colors group-hover:text-accent">
-                      {s.title}
-                    </h3>
-                  </div>
-                  <p className="mt-3 pl-9 text-[13px] leading-[1.9] text-ink-soft">
-                    {s.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
