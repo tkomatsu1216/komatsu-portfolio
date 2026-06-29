@@ -24,7 +24,7 @@ export default function ContactForm() {
     const data = new FormData(form);
     data.append("access_key", ACCESS_KEY);
     data.append("subject", "【HP経由】お問い合わせが届きました");
-    data.append("from_name", "小松 ポートフォリオサイト");
+    data.append("from_name", "ハピネス小松 ポートフォリオサイト");
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {

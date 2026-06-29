@@ -10,6 +10,17 @@ import ContactForm from "./components/ContactForm";
 const projects = [
   {
     no: "01",
+    period: "2025 — 現在",
+    client: "某エンターテインメント企業",
+    title: "伴走型IT支援・MEO集客プロジェクト",
+    description:
+      "ITコンサルティングからIT構築、MEO（Googleマップ集客）支援まで一気通貫で伴走。参画から4ヶ月で、10件未満だったGoogleマップのクチコミを100件超に増加させ、平均評価★5.0を実現しました。",
+    tags: ["MEO", "ITコンサル", "IT構築", "伴走支援"],
+    scale: "クチコミ 10件未満 → 100件超 / ★5.0",
+    role: "ITコンサルタント / MEO支援",
+  },
+  {
+    no: "02",
     period: "2025.06 — 現在",
     client: "某家事代行会社",
     title: "生成AI利活用推進プロジェクト",
@@ -20,10 +31,10 @@ const projects = [
     role: "プロジェクトマネージャー",
   },
   {
-    no: "02",
+    no: "03",
     period: "2023.07 — 現在",
     client: "東証スタンダード上場・機器製造会社",
-    title: "USEPA認証取得プロジェクト（PM2.5 / PM10）",
+    title: "USEPA認証取得プロジェクト",
     description:
       "大気測定機器の米国EPA認証取得を2件担当。PM2.5測定装置の認証試験では約2週間の遅延を参画後2ヶ月で解消、PM10測定装置の認証試験では予定通り認証取得を完了。米国コンサル7名・クライアント社員3名をリード。",
     tags: ["PMO→PM", "英語対応", "米国認証", "品質・進捗管理"],
@@ -31,7 +42,7 @@ const projects = [
     role: "チームリーダー〜PM",
   },
   {
-    no: "03",
+    no: "04",
     period: "2025.03 — 2025.05",
     client: "東証プライム上場・自動車会社",
     title: "開発内製化プロジェクト",
@@ -42,7 +53,7 @@ const projects = [
     role: "PMOメンバー",
   },
   {
-    no: "04",
+    no: "05",
     period: "2022.06 — 2023.06",
     client: "東証プライム上場・大手派遣会社",
     title: "アプリケーション統廃合支援プロジェクト",
@@ -53,7 +64,7 @@ const projects = [
     role: "実質チームリーダー",
   },
   {
-    no: "05",
+    no: "06",
     period: "2020.05 — 2020.09",
     client: "某イベント運営会社（IBM在籍時）",
     title: "イベント用Webアプリ開発プロジェクト",
@@ -74,9 +85,9 @@ const services = [
   },
   {
     no: "02",
-    title: "ITコンサルティング",
+    title: "IT支援・MEO集客",
     description:
-      "業務課題の可視化、改善提案、ベンダー選定支援。製造・金融・人材・航空など、業界を横断した知見でご支援します。",
+      "業務課題の可視化・改善提案からIT構築、MEO（Googleマップ集客）まで伴走支援。あるエンターテインメント企業では4ヶ月でクチコミを10件未満から100件超・平均★5.0へと改善しました。",
   },
   {
     no: "03",
@@ -98,8 +109,8 @@ const skills = [
     items: ["プロジェクトマネジメント", "PMO", "チームリード", "経営陣報告", "ベンダー管理", "品質・進捗管理"],
   },
   {
-    category: "テクノロジー",
-    items: ["Dify", "Python", "Vue.js", "Watson AIOps", "IBM Instana", "Oracle CX Cloud", "AWS", "IBM Cloud", "Docker"],
+    category: "テクノロジー・集客",
+    items: ["Dify", "MEO / Googleマップ集客", "IT構築", "Python", "Vue.js", "Watson AIOps", "Oracle CX Cloud", "AWS", "Docker"],
   },
   {
     category: "言語・資格",
@@ -125,8 +136,8 @@ export default function Home() {
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-line/60 bg-bg/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-baseline gap-2">
-            <span className="font-display text-lg font-bold tracking-tight">小松</span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-ink-soft">Komatsu</span>
+            <span className="font-display text-lg font-bold tracking-tight">ハピネス小松</span>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-ink-soft">Happiness Komatsu</span>
           </a>
           <div className="hidden items-center gap-9 text-[13px] text-ink-soft md:flex">
             <a href="#about" className="transition-colors hover:text-ink">About</a>
@@ -243,8 +254,8 @@ export default function Home() {
                 実質的なチームリーダーとしてクライアント折衝・役員報告を担い、次案件の受注に貢献しました。
               </p>
               <p>
-                2023年7月に独立。現在はフリーランスコンサルタントとして、製造・金融・人材など
-                幅広い業界のクライアントを支援しています。
+                2023年7月に独立。現在はフリーランスコンサルタントとして独立し、製造・金融・人材
+                など幅広い業界のクライアントを支援してきた。
               </p>
               <blockquote className="mt-8 border-l-2 border-gold pl-5 font-display text-lg leading-relaxed text-ink">
                 「周りの1.5倍のアウトプットを出す」「やり切るまで辞めない」。
@@ -414,7 +425,7 @@ export default function Home() {
       {/* ───── Footer ───── */}
       <footer className="bg-ink px-6 pb-10 text-bg/40">
         <div className="mx-auto max-w-6xl border-t border-bg/10 pt-8 text-center text-xs tracking-wide">
-          © {new Date().getFullYear()} Komatsu — Freelance IT Consultant
+          © {new Date().getFullYear()} ハピネス小松 — Freelance IT Consultant
         </div>
       </footer>
     </div>
