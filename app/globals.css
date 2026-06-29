@@ -1,38 +1,74 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --accent: #0ea5e9;
-  --accent-dark: #0284c7;
+  --bg: #faf9f6;
+  --bg-alt: #f2f0ea;
+  --ink: #14110d;
+  --ink-soft: #4a463f;
+  --line: #e3ded3;
+  --accent: #1c4d4a;
+  --accent-soft: #2d6e69;
+  --gold: #b08d4f;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-gold: var(--gold);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.7s ease forwards;
+::selection {
+  background: var(--accent);
+  color: #fff;
 }
 
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
+.font-display {
+  font-family: var(--font-display), "Shippori Mincho", serif;
+}
+
+/* 罫線アニメーション */
+@keyframes growLine {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-1 { animation-delay: 0.05s; }
+.reveal-2 { animation-delay: 0.18s; }
+.reveal-3 { animation-delay: 0.31s; }
+.reveal-4 { animation-delay: 0.44s; }
+
+.hairline {
+  height: 1px;
+  background: var(--ink);
+  transform-origin: left;
+  animation: growLine 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
