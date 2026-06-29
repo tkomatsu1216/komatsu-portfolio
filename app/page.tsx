@@ -25,7 +25,7 @@ const projects = [
     client: "東証スタンダード上場・機器製造会社",
     title: "USEPA認証取得プロジェクト（PM2.5 / PM10）",
     description:
-      "大気測定機器の米国EPA認証取得を2件担当。PM2.5では約2週間の遅延を参画後2ヶ月で解消、PM10では予定通り認証取得を完了。米国コンサル7名・クライアント社員3名をリード。",
+      "大気測定機器の米国EPA認証取得を2件担当。PM2.5測定装置の認証試験では約2週間の遅延を参画後2ヶ月で解消、PM10測定装置の認証試験では予定通り認証取得を完了。米国コンサル7名・クライアント社員3名をリード。",
     tags: ["PMO→PM", "英語対応", "米国認証", "品質・進捗管理"],
     scale: "内部4名 / 外部7名",
     role: "チームリーダー〜PM",
@@ -114,7 +114,7 @@ const skills = [
 const timeline = [
   { year: "2018", event: "米国 Lindenwood 大学 数学・情報科学部 卒業" },
   { year: "2018", event: "日本アイ・ビー・エム株式会社 IBM Consulting 事業部" },
-  { year: "2022", event: "株式会社ライズ・コンサルティング・グループ" },
+  { year: "2022", event: "日系コンサルファーム（社名非公開）" },
   { year: "2023", event: "独立 — フリーランスコンサルタント" },
 ];
 
@@ -125,8 +125,8 @@ export default function Home() {
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-line/60 bg-bg/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-baseline gap-2">
-            <span className="font-display text-lg font-bold tracking-tight">小松 琢昂</span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-ink-soft">Takaaki Komatsu</span>
+            <span className="font-display text-lg font-bold tracking-tight">小松</span>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-ink-soft">Komatsu</span>
           </a>
           <div className="hidden items-center gap-9 text-[13px] text-ink-soft md:flex">
             <a href="#about" className="transition-colors hover:text-ink">About</a>
@@ -161,7 +161,7 @@ export default function Home() {
           </h1>
           <div className="reveal reveal-3 mt-10 grid gap-10 md:grid-cols-[1.4fr_1fr] md:items-end">
             <p className="max-w-xl text-[15px] leading-[2] text-ink-soft">
-              IBM・ライズコンサルティングを経て独立。製造・金融・人材など幅広い業界で、
+              IBM・日系コンサルファームを経て独立。製造・金融・人材など幅広い業界で、
               PMO・プロジェクトマネージャーとして数々の課題解決に貢献してきました。
               英語対応・生成AI導入・グローバルプロジェクトもお任せください。
             </p>
@@ -185,7 +185,7 @@ export default function Home() {
           <div className="reveal reveal-4 mt-20 hairline" />
           <div className="reveal reveal-4 grid grid-cols-2 gap-px overflow-hidden md:grid-cols-4">
             {[
-              { num: "7", unit: "年", label: "業界経験" },
+              { num: "8", unit: "年", label: "業界経験" },
               { num: "10", unit: "+", label: "業界横断の実績" },
               { num: "905", unit: "", label: "TOEIC スコア" },
               { num: "PM", unit: "/PMO", label: "複数役職を経験" },
@@ -199,6 +199,31 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* 冒頭で提供サービス4要素を提示（ユーザー指示: 冒頭部分に4つの要素を入れる） */}
+          <div className="reveal reveal-4 mt-24">
+            <p className="mb-8 text-xs uppercase tracking-[0.35em] text-accent">
+              What I can do — 提供できること
+            </p>
+            <div className="grid gap-px border-t border-line sm:grid-cols-2">
+              {services.map((s) => (
+                <div
+                  key={s.title}
+                  className="group border-b border-line px-2 py-8 transition-colors sm:px-6 sm:odd:border-r"
+                >
+                  <div className="flex items-baseline gap-4">
+                    <span className="font-display text-sm text-gold">{s.no}</span>
+                    <h3 className="font-display text-lg font-semibold text-ink transition-colors group-hover:text-accent">
+                      {s.title}
+                    </h3>
+                  </div>
+                  <p className="mt-3 pl-9 text-[13px] leading-[1.9] text-ink-soft">
+                    {s.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -209,12 +234,12 @@ export default function Home() {
           <div className="mt-14 grid gap-16 md:grid-cols-[1.3fr_1fr]">
             <div className="space-y-6 text-[15px] leading-[2] text-ink-soft">
               <p>
-                米国 Lindenwood 大学（ミズーリ州）数学・情報科学部を卒業後、2018年に
+                米国ミズーリ州の大学にて数学・情報科学履修後、2018年に
                 <span className="text-ink">日本IBM</span> に入社。IT Specialist として
                 国内外のプロジェクトでチームリード・開発・ITコンサルティングに従事しました。
               </p>
               <p>
-                2022年より <span className="text-ink">株式会社ライズ・コンサルティング・グループ</span> へ。
+                2022年より <span className="text-ink">日系コンサルファーム</span> へ。
                 実質的なチームリーダーとしてクライアント折衝・役員報告を担い、次案件の受注に貢献しました。
               </p>
               <p>
@@ -363,7 +388,7 @@ export default function Home() {
             </h2>
             <p className="mt-8 max-w-sm text-sm leading-[2] text-bg/70">
               ご相談・お見積りはフォームよりお気軽にどうぞ。
-              通常2営業日以内にご返信いたします。現在の稼働状況によりお受けできない場合もございますので、
+              通常1営業日以内にご返信いたします。現在の稼働状況によりお受けできない場合もございますので、
               まずはご連絡ください。
             </p>
             <div className="mt-10 space-y-3 text-sm text-bg/70">
@@ -375,7 +400,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-gold">◷</span>
-                <span>返信目安: 2営業日以内</span>
+                <span>返信目安: 1営業日以内</span>
               </div>
             </div>
           </div>
@@ -389,7 +414,7 @@ export default function Home() {
       {/* ───── Footer ───── */}
       <footer className="bg-ink px-6 pb-10 text-bg/40">
         <div className="mx-auto max-w-6xl border-t border-bg/10 pt-8 text-center text-xs tracking-wide">
-          © {new Date().getFullYear()} Takaaki Komatsu — Freelance IT Consultant
+          © {new Date().getFullYear()} Komatsu — Freelance IT Consultant
         </div>
       </footer>
     </div>
